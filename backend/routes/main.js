@@ -18,7 +18,7 @@ module.exports = function (app){
 
         if(isFolder(base + path)){
             // если переданный параметр - папка
-            let files = fs.readdirSync(base + path).map(item => {
+            let files = fs.readdirSync(base + path).map(item => { 
                 const isDir = fs.lstatSync(base+path+'/'+item).isDirectory();
                 let size = 0;
                 if(!isDir){
